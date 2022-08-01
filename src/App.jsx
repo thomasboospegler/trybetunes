@@ -28,7 +28,6 @@ class App extends React.Component {
     this.setState({
       loading: true,
     }, async () => {
-      console.log('aaa');
       const { userName } = this.state;
       await createUser({ name: userName });
       this.setState({
@@ -42,7 +41,6 @@ class App extends React.Component {
     const { userName, loading, loggedIn } = this.state;
     return (
       <div>
-        <h1>TrybeTunes</h1>
         {loggedIn && <Redirect to="/search" />}
         <Switch>
           <Route
