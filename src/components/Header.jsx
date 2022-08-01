@@ -9,6 +9,10 @@ export default class Header extends Component {
     name: '',
   }
 
+  componentDidMount() {
+    this.handleGetUser();
+  }
+
   handleGetUser = async () => {
     const result = await getUser();
     this.setState({
@@ -19,7 +23,6 @@ export default class Header extends Component {
   }
 
   render() {
-    this.handleGetUser();
     const { loading, name } = this.state;
     return (
       <header data-testid="header-component">
