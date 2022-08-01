@@ -27,7 +27,7 @@ export default class Search extends Component {
       savedArtist: artist,
     }, async () => {
       const result = await searchAlbumsAPI(artist);
-      const notExistMssg = (<div>Nenhum álbum foi encontrado</div>);
+      const notExistMssg = 'Nenhum álbum foi encontrado';
       this.setState({
         loading: false,
         artist: '',
@@ -64,7 +64,7 @@ export default class Search extends Component {
             ))}
           </div>
         </div>
-      ) : notExistMssg);
+      ) : (<div>{ notExistMssg }</div>));
 
     return (
       <div data-testid="page-search">
