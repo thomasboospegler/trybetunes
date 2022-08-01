@@ -12,6 +12,7 @@ export default class Album extends Component {
   async componentDidMount() {
     const { match: { params: { id } } } = this.props;
     const result = await getMusics(id);
+    console.log(result);
     this.setState({
       songsList: result,
     });
