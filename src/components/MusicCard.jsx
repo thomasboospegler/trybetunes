@@ -32,7 +32,6 @@ export default class MusicCard extends Component {
   render() {
     const { songsList } = this.props;
     const { loading, favoriteSongs } = this.state;
-    console.log(loading);
     return (
       !loading ? (
         songsList.map((song) => {
