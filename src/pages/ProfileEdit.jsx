@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { getUser, updateUser } from '../services/userAPI';
-import Header from './Header';
-import Loading from './Loading';
+import Header from '../components/Header';
+import Loading from '../components/Loading';
 
 export default class ProfileEdit extends Component {
   state = {
