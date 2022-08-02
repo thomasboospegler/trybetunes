@@ -73,7 +73,6 @@ export default class MusicCard extends Component {
 MusicCard.propTypes = {
   songsList: PropTypes.arrayOf(
     PropTypes.shape({
-      artistId: PropTypes.number.isRequired,
     }).isRequired,
   ).isRequired,
 };

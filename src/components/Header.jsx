@@ -19,7 +19,6 @@ export default class Header extends Component {
       loading: true,
       name: result.name,
     });
-    return result.name;
   }
 
   render() {
