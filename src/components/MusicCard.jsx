@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { addSong } from '../services/favoriteSongsAPI';
+import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Loading from './Loading';
 
 export default class MusicCard extends Component {
@@ -9,16 +9,22 @@ export default class MusicCard extends Component {
     favoriteSongs: [],
   }
 
+  async componentDidMount() {
+    const favList = await getFavoriteSongs();
+    this.setState({
+      favoriteSongs: favList,
+    });
+  }
+
   handleChange = (song) => {
-    const { favoriteSongs } = this.state;
     this.setState({
       loading: true,
-      favoriteSongs: [...favoriteSongs, song],
     }, async () => {
-      console.log(song);
       await addSong(song);
+      const { favoriteSongs } = this.state;
       this.setState({
         loading: false,
+        favoriteSongs: [...favoriteSongs, song],
       });
     });
   }
@@ -26,6 +32,7 @@ export default class MusicCard extends Component {
   render() {
     const { songsList } = this.props;
     const { loading, favoriteSongs } = this.state;
+    console.log(loading);
     return (
       !loading ? (
         songsList.map((song) => {

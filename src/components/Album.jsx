@@ -12,14 +12,13 @@ export default class Album extends Component {
   async componentDidMount() {
     const { match: { params: { id } } } = this.props;
     const result = await getMusics(id);
-    console.log(result);
     this.setState({
       songsList: result,
     });
   }
 
   render() {
-    const { songsList } = this.state;
+    const { songsList, favSongsList } = this.state;
     const filteredSongsList = songsList.filter((_song, index) => index > 0);
     return (
       <div data-testid="page-album">
@@ -36,6 +35,7 @@ export default class Album extends Component {
         <section>
           <MusicCard
             songsList={ filteredSongsList }
+            favoriteSongs={ favSongsList }
           />
         </section>
       </div>
