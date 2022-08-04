@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
+import '../styles/Search.css';
 
 export default class Search extends Component {
   state = {
@@ -42,20 +43,21 @@ export default class Search extends Component {
     const isDisable = artist.length < 2;
     const albumsList = (
       albums.length > 0 ? (
-        <div>
+        <div className="albumsList-container">
           <h3>
             Resultado de álbuns de:
             {' '}
             {savedArtist}
           </h3>
-          <div>
+          <div className="albumsList">
             {albums.map((album) => (
               <Link
+                className="link"
                 key={ album.collectionId }
                 to={ `/album/${album.collectionId}` }
                 data-testid={ `link-to-album-${album.collectionId}` }
               >
-                <div>
+                <div className="album">
                   <img src={ album.artworkUrl100 } alt="Cover" />
                   <h4>{ album.collectionName }</h4>
                   <p>{ album.artistName }</p>
@@ -69,8 +71,9 @@ export default class Search extends Component {
     return (
       <div data-testid="page-search">
         <Header />
-        <div>
+        <section className="search-bar-section">
           <input
+            placeholder="Nome do artista"
             data-testid="search-artist-input"
             value={ artist }
             type="text"
@@ -85,7 +88,7 @@ export default class Search extends Component {
           >
             Procurar
           </button>
-        </div>
+        </section>
         { !loading ? albumsList : <Loading /> }
       </div>
     );

@@ -1,0 +1,26 @@
+.song {
+  align-items: center;
+  border-bottom: 1px solid #e1e5eb;
+  border-top: 1px solid #e1e5eb;
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+}
+
+.song p {
+  width: 30%;
+}
+
+.song label .checked {
+  color: red;
+  font-size: xx-large;
+}
+
+.song label .default {
+  font-size: xx-large;
+  font-weight: 200;
+}
+
+.song label input {
+  display: none;
+}

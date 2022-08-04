@@ -1,0 +1,77 @@
+header {
+  background-color: #023031;
+  display: flex;
+  flex-direction: column;
+  height: 135px;
+}
+
+header img {
+  transform: translate(-10px, -11px);
+  width: 100px;
+}
+
+header .header-section {
+  align-items: center;
+  background-color: #023031;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 70px;
+}
+
+header .header-section .user-name {
+  align-items: center;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  color: black;
+  display: flex;
+  gap: 10px;
+  height: 41.65px;
+  text-decoration: none;
+  width: 198.7px;
+}
+
+header .header-section .user-name img {
+  border-radius: 50px;
+  height: 36px;
+  margin-left: 2px;
+  transform: translate(0, 0);
+  width: 36px;
+}
+
+header .header-section .user-name p {
+  text-align: center;
+  width: 65%;
+}
+
+header .nav-bar-section {
+  align-items: center;
+  background-color: #f0f2f5;
+  box-shadow: 1px 2px 5px 2px #f0f2f5;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+header .nav-bar-section div {
+  align-items: center;
+  display: flex;
+  height: 65px;
+  justify-content: center;
+  width: 33%;
+}
+
+header .nav-bar-section .link-mid {
+  border-left: solid 4px white;
+  border-right: solid 4px white;
+}
+
+header .nav-bar-section .link {
+  color: #2fc18c;
+  font-size: x-large;
+  text-decoration: none;
+}
+
+.acive {
+  background-color: #023031;
+}

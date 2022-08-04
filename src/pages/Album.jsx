@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import getMusics from '../services/musicsAPI';
 import MusicCard from '../components/MusicCard';
+import '../styles/Album.css';
 
 export default class Album extends Component {
   state = {
@@ -23,21 +24,23 @@ export default class Album extends Component {
     return (
       <div data-testid="page-album">
         <Header />
-        <section>
+        <div className="album-container">
           { songsList.length > 0 && (
-            <>
+            <section className="cover-album">
               <img src={ songsList[0].artworkUrl100 } alt="" />
-              <p data-testid="album-name">{ songsList[0].collectionName }</p>
-              <p data-testid="artist-name">{ songsList[0].artistName }</p>
-            </>
+              <div>
+                <p data-testid="album-name">{ songsList[0].collectionName }</p>
+                <span data-testid="artist-name">{ songsList[0].artistName }</span>
+              </div>
+            </section>
           )}
-        </section>
-        <section>
-          <MusicCard
-            songsList={ filteredSongsList }
-            favoriteSongs={ favSongsList }
-          />
-        </section>
+          <section className="songs-list">
+            <MusicCard
+              songsList={ filteredSongsList }
+              favoriteSongs={ favSongsList }
+            />
+          </section>
+        </div>
       </div>
     );
   }

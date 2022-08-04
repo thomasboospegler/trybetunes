@@ -9,6 +9,7 @@ import ProfileEdit from './pages/ProfileEdit';
 import NotFound from './pages/NotFound';
 import Loading from './components/Loading';
 import { createUser } from './services/userAPI';
+import './styles/App.css';
 
 class App extends React.Component {
   state = {

@@ -1,0 +1,92 @@
+.search-bar-section {
+  align-items: center;
+  display: flex;
+  height: 13rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-bar-section input {
+  border: rgba(0, 0, 0, 0.409) solid 1px;
+  border-radius: 4px;
+  margin-right: 30px;
+  padding: 13px;
+  width: 25%;
+}
+
+.search-bar-section button {
+  background-color: #003be5;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 13px;
+  width: 100px;
+}
+
+.search-bar-section button:disabled {
+  background-color: #0039e5de;
+}
+
+.albumsList-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 0 7% 50px;
+}
+
+.albumsList-container h3 {
+  color: #001813;
+  font-family: Epilogue , serif;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 25px;
+  margin-left: 20px;
+}
+
+.albumsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.albumsList .link {
+  color: #3d495c;
+  text-decoration: none;
+}
+
+.albumsList .album {
+  align-items: center;
+  background-color: white;
+  border: 1px solid #e1e5eb;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06) , 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-flow: column wrap;
+  gap: 10px;
+  height: 320px;
+  width: 230px;
+}
+
+.albumsList .album img {
+  height: 180px;
+  width: 230px;
+}
+
+.albumsList .album h4 {
+  font-family: Verdana , serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  text-decoration: none;
+  width: 90%;
+}
+
+.albumsList .album p {
+  font-family: Verdana , serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 150%;
+  text-decoration: none;
+  width: 90%;
+}

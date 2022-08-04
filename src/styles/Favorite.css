@@ -1,0 +1,48 @@
+.page-favorites {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  /* max-height: 700px; */
+
+  /* overflow-y: scroll; */
+  margin-top: 40px;
+}
+
+.song-favorites {
+  align-items: center;
+  border-bottom: 1px solid #e1e5eb;
+  border-top: 1px solid #e1e5eb;
+  display: flex;
+  gap: 5rem;
+  max-width: 1000px;
+  padding: 15px;
+}
+
+.song-favorites img {
+  border-radius: 50px;
+  height: 61px;
+  width: 61px;
+}
+
+.song-favorites audio {
+  width: 400px;
+}
+
+.song-favorites p {
+  width: 30%;
+}
+
+.song-favorites label .checked {
+  color: red;
+  font-size: xx-large;
+}
+
+.song-favorites label .default {
+  font-size: xx-large;
+  font-weight: 200;
+}
+
+.song-favorites label input {
+  display: none;
+}
