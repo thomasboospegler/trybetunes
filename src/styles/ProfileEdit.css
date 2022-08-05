@@ -74,3 +74,23 @@
 .profileEdit-page .info-section textarea {
   height: 85px;
 }
+
+.profileEdit-page button {
+  background: #003be5;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-family: Verdana , serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  height: 40px;
+  line-height: 150%;
+  width: 115px;
+}
+
+.profileEdit-page button:hover {
+  background-color: #fafafa;
+  border: solid blue 1px;
+  color: #003be5;
+}
