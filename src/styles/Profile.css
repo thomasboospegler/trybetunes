@@ -24,19 +24,19 @@
   border: solid blue 1px;
   border-radius: 5px;
   color: blue;
-  font-family: Verdana, serif;
+  font-family: Verdana , serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 132%;
   height: 30px;
+  line-height: 132%;
   width: 110px;
 }
 
 .profile-page .imagebutton-section button:hover {
+  background-color: rgba(0, 0, 255, 0.726);
   color: white;
   cursor: pointer;
-  background-color: rgba(0, 0, 255, 0.726);
 }
 
 .profile-page .info-section {
@@ -47,19 +47,19 @@
 }
 
 .profile-page .info-section h4 {
+  color: #3d495c;
   font-family: Verdana , serif;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
   line-height: 150%;
-  color: #3D495C;
 }
 
 .profile-page .info-section p {
+  color: #3d495c;
   font-family: Verdana , serif;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
   line-height: 150%;
-  color: #3D495C;
 }
