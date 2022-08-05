@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { getUser, updateUser } from '../services/userAPI';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
+import '../styles/ProfileEdit.css';
 
 export default class ProfileEdit extends Component {
   state = {
@@ -62,51 +63,64 @@ export default class ProfileEdit extends Component {
         <Header />
         { submited && <Redirect to="/profile" /> }
         { !loading ? (
-          <section>
-            <img data-testid="profile-image" src={ image } alt={ name } />
-            <label htmlFor="edit-input-image">
-              <input
-                data-testid="edit-input-image"
-                type="text"
-                name="image"
-                value={ image }
-                id="edit-input-image"
-                onChange={ this.handleChange }
-              />
-            </label>
-            <h4>Nome:</h4>
-            <label htmlFor="edit-input-name">
-              <input
-                data-testid="edit-input-name"
-                type="text"
-                name="name"
-                value={ name }
-                id="edit-input-name"
-                onChange={ this.handleChange }
-              />
-            </label>
-            <h4>E-mail</h4>
-            <label htmlFor="edit-input-email">
-              <input
-                data-testid="edit-input-email"
-                type="text"
-                name="email"
-                value={ email }
-                id="edit-input-email"
-                onChange={ this.handleChange }
-              />
-            </label>
-            <h4>Descrição</h4>
-            <label htmlFor="edit-input-description">
-              <input
-                data-testid="edit-input-description"
-                type="text"
-                name="description"
-                value={ description }
-                id="edit-input-description"
-                onChange={ this.handleChange }
-              />
-            </label>
+          <section className="profileEdit-page">
+            <div className="image-section">
+              <img data-testid="profile-image" src={ image } alt={ name } />
+              <label htmlFor="edit-input-image">
+                <input
+                  data-testid="edit-input-image"
+                  type="text"
+                  name="image"
+                  placeholder="Insira um link"
+                  value={ image }
+                  id="edit-input-image"
+                  onChange={ this.handleChange }
+                />
+              </label>
+            </div>
+            <div className="info-section">
+              <h4>Nome:</h4>
+              <p>Fique a vontade para user seu nome social</p>
+              <label htmlFor="edit-input-name">
+                <input
+                  data-testid="edit-input-name"
+                  type="text"
+                  name="name"
+                  value={ name }
+                  id="edit-input-name"
+                  onChange={ this.handleChange }
+                />
+              </label>
+            </div>
+            <div className="info-section">
+              <h4>E-mail</h4>
+              <p>Escolha um email que consulte diariamente</p>
+              <label htmlFor="edit-input-email">
+                <input
+                  data-testid="edit-input-email"
+                  type="text"
+                  name="email"
+                  value={ email }
+                  placeholder="usuario@usuario.com.br"
+                  id="edit-input-email"
+                  onChange={ this.handleChange }
+                />
+              </label>
+            </div>
+            <div className="info-section">
+              <h4>Descrição</h4>
+              <label htmlFor="edit-input-description">
+                <textarea
+                  data-testid="edit-input-description"
+                  type="text"
+                  name="description"
+                  placeholder="Sobre mim"
+                  value={ description }
+                  id="edit-input-description"
+                  onChange={ this.handleChange }
+                />
+              </label>
+            </div>
             <button
               data-testid="edit-button-save"
               type="submit"

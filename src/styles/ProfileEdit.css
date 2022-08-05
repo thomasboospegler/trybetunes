@@ -1,0 +1,77 @@
+.profileEdit-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 70px;
+}
+
+.profileEdit-page .image-section {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+}
+
+.profileEdit-page .image-section img {
+  border-radius: 50px;
+  height: 80px;
+  width: 80px;
+}
+
+.profileEdit-page .image-section input {
+  background-color: #FAFAFA;
+  border: 1px solid #DADADA;
+  border-radius: 2px;
+  font-family: Verdana, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
+  padding: 0 8px;
+  width: 170px;
+}
+
+.profileEdit-page .info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 280px;
+}
+
+.profileEdit-page .info-section h4 {
+  font-family: Verdana , serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #3D495C;
+}
+
+.profileEdit-page .info-section p {
+  font-family: Verdana, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #3D495C;
+}
+
+.profileEdit-page .info-section input , 
+.profileEdit-page .info-section textarea {
+  background-color: #FAFAFA;
+  border: none;
+  border-bottom: 1px solid #3d495c75;
+  font-family: Verdana , serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #3D495C;
+  padding: 5px;
+  width: 280px;
+}
+
+.profileEdit-page .info-section textarea {
+  height: 85px;
+}
